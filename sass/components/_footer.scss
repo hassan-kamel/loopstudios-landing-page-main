@@ -1,0 +1,56 @@
+@use "../util" as utl;
+.footer-section {
+    background-color: utl.$clr-black;
+    height: 20vh;
+}
+
+.footer {
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &__logo {
+        margin-bottom: 1.5em;
+    }
+    &__nav-list {}
+    &__nav-item {}
+    //copyRights
+    &__copy {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    &__social {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        column-gap: 2em;
+        margin-bottom: 1.5em;
+    }
+    &__media {
+        position: relative;
+        cursor: pointer;
+        &::after {
+            content: '';
+            display: block;
+            background-color: utl.$clr-white;
+            width: 100%;
+            height: 0.3rem;
+            position: absolute;
+            top: 3rem;
+            transform-origin: center;
+            transform: scaleX(0);
+            transition: all 0.4s ease;
+        }
+        &:hover::after {
+            transform: scaleX(1);
+        }
+    }
+    &__rights {
+        color: utl.$clr-dark-grey;
+    }
+}

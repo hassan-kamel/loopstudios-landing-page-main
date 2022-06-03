@@ -1,0 +1,33 @@
+@use "../util" as utl;
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: utl.$fnt-head;
+}
+
+h1 {
+    font-family: utl.$fnt-par;
+}
+
+ul {
+    list-style: none;
+}
+
+a,
+a:focus,
+a:visited,
+button,
+button:focus,
+button:visited {
+    text-decoration: none;
+    color: utl.$clr-black;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+p {
+    font-size: 1.5rem;
+}

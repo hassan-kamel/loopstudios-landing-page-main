@@ -1,0 +1,32 @@
+@use "../util" as utl;
+header {
+    height: 100vh;
+    background-image: url(../images/desktop/image-hero.jpg);
+    background-size: cover;
+}
+
+.header {
+    &__navbar {
+        height: 20vh;
+        // background-color: red;
+    }
+    &__logo {}
+    &__nav-list {}
+    &__nav-item {}
+    &__hero {
+        height: 80vh;
+        position: relative;
+    }
+    &__hero-title {
+        position: absolute;
+        top: 15vh;
+        left: 5rem;
+        width: 50%;
+        color: utl.$clr-white;
+        font-size: 7rem;
+        outline: 0.3rem solid utl.$clr-white;
+        outline-offset: 5rem;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+}

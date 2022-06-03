@@ -1,5 +1,269 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
-  background-color: lightsalmon;
+  font-size: 1.5rem;
+  box-sizing: border-box;
+  font-family: "Alata", sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 116rem;
+  margin: 0 auto;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+h1 {
+  font-family: "Alata", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a,
+a:focus,
+a:visited,
+button,
+button:focus,
+button:visited {
+  text-decoration: none;
+  color: #000000;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 3.5rem;
+  color: #ffffff;
+}
+.navigation li {
+  position: relative;
+  cursor: pointer;
+}
+.navigation li::after {
+  content: "";
+  display: block;
+  background-color: #ffffff;
+  width: 100%;
+  height: 0.3rem;
+  position: absolute;
+  top: 3rem;
+  transform-origin: center;
+  transform: scaleX(0);
+  transition: all 0.4s ease;
+}
+.navigation li:hover::after {
+  transform: scaleX(1);
+}
+
+header {
+  height: 100vh;
+  background-image: url(../images/desktop/image-hero.jpg);
+  background-size: cover;
+}
+
+.header__navbar {
+  height: 20vh;
+}
+.header__hero {
+  height: 80vh;
+  position: relative;
+}
+.header__hero-title {
+  position: absolute;
+  top: 15vh;
+  left: 5rem;
+  width: 50%;
+  color: #ffffff;
+  font-size: 7rem;
+  outline: 0.3rem solid #ffffff;
+  outline-offset: 5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.interactive {
+  margin: 10em 0;
+  display: flex;
+}
+.interactive__image {
+  flex: 3;
+  background-image: url(../images/desktop/image-interactive.jpg);
+  background-size: cover;
+}
+.interactive__about {
+  flex: 2;
+  background-color: #ffffff;
+  padding: 7rem;
+  position: relative;
+  left: -12rem;
+  top: 12rem;
+}
+.interactive__title {
+  font-size: 5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+.interactive__par {
+  color: #8c8c8c;
+  margin-bottom: 5rem;
+}
+
+.creation {
+  margin-bottom: 10em;
+}
+.creation__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5em;
+}
+.creation__head .title {
+  text-transform: uppercase;
+  font-size: 5rem;
+  font-weight: 300;
+}
+.creation__head a {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  text-decoration: none;
+  border: 1.5px solid #000000;
+  padding: 0.5em 1.5em;
+  font-size: 2rem;
+}
+.creation__head a:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+.creation__carts {
+  display: flex;
+  gap: 2%;
+  flex-wrap: wrap;
+}
+.creation__cart {
+  position: relative;
+  width: 23.5%;
+  margin-bottom: 2%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.creation__cart img {
+  width: 100%;
+  filter: brightness(60%);
+}
+.creation__cart::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform-origin: 100% 0;
+  transform: scaleY(0);
+  transition: transform 0.3s ease-out;
+}
+.creation__cart:hover::after {
+  transform: scaleY(1);
+}
+.creation__cart-title {
+  position: absolute;
+  left: 1em;
+  bottom: 1em;
+  color: #ffffff;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: "Josefin Sans", sans-serif;
+  z-index: 9;
+}
+.creation__cart:hover .creation__cart-title {
+  color: #000000;
+}
+
+.footer-section {
+  background-color: #000000;
+  height: 20vh;
+}
+
+.footer {
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__navbar {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer__logo {
+  margin-bottom: 1.5em;
+}
+.footer__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.footer__social {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 2em;
+  margin-bottom: 1.5em;
+}
+.footer__media {
+  position: relative;
+  cursor: pointer;
+}
+.footer__media::after {
+  content: "";
+  display: block;
+  background-color: #ffffff;
+  width: 100%;
+  height: 0.3rem;
+  position: absolute;
+  top: 3rem;
+  transform-origin: center;
+  transform: scaleX(0);
+  transition: all 0.4s ease;
+}
+.footer__media:hover::after {
+  transform: scaleX(1);
+}
+.footer__rights {
+  color: #8c8c8c;
 }
 
 /*# sourceMappingURL=style.css.map */

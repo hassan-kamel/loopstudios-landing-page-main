@@ -1,3 +1,2 @@
-body {
-    background-color: lightsalmon;
-}
+@forward "global";
+@forward "components";
