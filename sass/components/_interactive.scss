@@ -1,9 +1,11 @@
 @use "../util" as utl;
-// .interactive-section {}
+.interactive-section {
+
+    overflow-x: hidden;
+}
 .interactive {
     margin: 10em 0;
     display: flex;
-    // overflow: hidden;
     &__image {
         flex: 3;
         background-image: url(../images/desktop/image-interactive.jpg);

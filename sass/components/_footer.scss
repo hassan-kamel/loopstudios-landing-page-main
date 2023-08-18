@@ -2,6 +2,7 @@
 .footer-section {
     background-color: utl.$clr-black;
     height: 20vh;
+    overflow-x: hidden  ;
 }
 
 .footer {
@@ -9,6 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    // width: 100vw;
     &__navbar {
         flex-direction: column;
         align-items: flex-start;

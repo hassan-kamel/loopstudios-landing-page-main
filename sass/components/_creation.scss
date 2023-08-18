@@ -1,4 +1,7 @@
 @use "../util" as utl;
+.creation-section{
+    overflow-x: hidden;
+}
 .creation {
     margin-bottom: 10em;
     &__head {
